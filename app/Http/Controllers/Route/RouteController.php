@@ -56,6 +56,15 @@ class RouteController extends Controller
         ]);
     }
 
+    public function search(){
+
+        return view('pages.search', [
+            'title'=>'Home',
+            'header'=>'Search',
+        ]);
+
+    }
+
     
 
 }

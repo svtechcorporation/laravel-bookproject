@@ -11,19 +11,21 @@
                     @for($i=0; $i < 5;$i++)
                         <div class="w-full flex items-center justify-between p-2 shadow-md mb-2">
                             <h1 class="mr-5 text-sm">{{$i+1}}.</h1>
-                            <img src="{{asset('img/basicprogram.jpg')}}" style="width: 50px;"/>
-                            <div class="w-10/12 px-2">
+                            <img src="{{asset('img/basicprogram.jpg')}}" style="width: 50px;" class=""/>
+                            <div class="w-8/12 px-2">
                                 <h1 class="leading-3 font-bold text-gray-800 mb-3">Cart Item name</h1>
                                 <h1 class="text-sm text-gray-500">Price: <span class="text-md text-red-500
                                 font-bold">$350</span></h1>
                             </div>
-                            <div class="">
-                                <label class="text-xs text-gray-500">Quantity</label>
-                                <input type="number" class="bg-white text-dark shadow-md outline-none
-                                p-2"
-                                value="1" />
+                            <div class="flex flex-col mr-5">
+                                <label class="text-xs text-gray-500 text-center">Quantity</label>
+                                <input type="number" class="bg-white text-center text-dark shadow-md 
+                                outline-none p-2 " style="width: 70px;" value="1" />
                             </div>
-                            <a href="" class="">x</a>
+                            <a href="" class="flex flex-col items-center">
+                                <p class="bg-red-500 px-2 text-white rounded-full hover:bg-red-800">x</p>
+                                <p class="text-xs text-gray-500">Remove</p>
+                            </a>
                         </div>
                     @endfor
                 </div>

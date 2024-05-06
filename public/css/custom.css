@@ -74,6 +74,19 @@ body {
     color: white;
 }
 
+.nav-link-search {
+    position: relative;
+}
+.nav-link-search:hover .search-bar {
+    display: flex;
+}
+
+.nav-link-search .search-bar {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
 .sticky {
     position: fixed;
     top: 0;
