@@ -34,7 +34,7 @@
                 <p class="text-xs">Search</p>
             </a>
             <div class="search-bar p-3 bg-white shadow hover:text-dark">
-                <form class="flex w-full items-center bg-dark border-1 border-gray-300">
+                <form action="{{route('search')}}" class="flex w-full items-center bg-dark border-1 border-gray-300">
                     <input type="text" placeholder="Find your desired books...." class="p-2 text-dark 
                     outline-none" style="width: 500px;"/>
                     <button type="submit" class="text-white bg-dark px-4 py-2">Search</button>
