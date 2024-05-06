@@ -1,0 +1,143 @@
+* {
+    --primaryColor: rgb(212, 54, 54);
+    --dark: rgb(27, 27, 27);
+    transition: all .5s;
+}
+body {
+    transition: all 2s;
+}
+
+/* navigation */
+.nav-link-right a img {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-link-right div {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.nav-link-right div:hover {
+    background: var(--primaryColor);
+    color: white;
+}
+
+.nav-link-right div:hover div {
+    background: none;
+}
+
+
+.nav-link-right div:hover a {
+    color: white;
+}
+
+.nav-link-right a:hover img {
+    filter: invert(1);
+}
+
+.nav-link-center li {
+    margin: 0px 10px;
+    padding: 10px;
+    color: var(--dark);
+    font-weight: bold;
+}
+.nav-link-center li a:hover {
+    color: var(--primaryColor);
+}
+.nav-link-center .nav-active a:hover {
+    color: var(--dark);
+}
+
+.nav-link-cart {
+    display: relative;
+}
+
+.nav-link-cart:hover .cart-style {
+    display: flex;
+}
+
+.cart-style {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 150px;
+    width: 350px;
+    border-radius: 0px;
+}
+
+.nav-active {
+    background-color: var(--primaryColor);
+    border-radius: 10%;
+}
+.nav-active a {
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+/* landing page */
+
+.landing-page {
+    background: linear-gradient(rgba(255, 255, 255, 0.850), rgba(224, 224, 224, 0.850)),
+    url('../img/bg4.jpg');
+}
+
+
+/* hover button customization */
+.button-hover:hover {
+    opacity: 0.7;
+}
+
+/* single button */
+
+.singlebook {
+    position: relative;
+    transition: all .2s;
+}
+
+.singlebook:hover .hidden-btn {
+    display: flex;
+}
+
+.singlebook .hidden-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(146, 146, 146, 0.5);
+}
+
+
+/* footer */
+
+.footer-links h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.footer-links a {
+    font-size: 0.8em;
+    margin: 3px 0px;
+    display: flex;
+}
+
+.footer-links a:hover {
+    color: red;
+    font-weight: 500;
+}
+
+.footer-links img {
+    width: 20px;
+    filter: invert(1);
+    margin-right: 4px;
+}
+
+
+
+
