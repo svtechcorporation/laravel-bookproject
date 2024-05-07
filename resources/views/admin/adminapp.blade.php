@@ -23,83 +23,31 @@
                 <!-- Links -->
                 <div class="mt-5 ml-3">
                     <!-- dashboard -->
-                    <div class="{{ $route == 'dashboard' ? 'bg-gray-100' : 'bg-red-900' }}">
-                        @if($route=='dashboard')
-                            <div class="bg-red-900 rounded-br-full" style="height: 20px;"></div>
-                        @endif
+                    <div class="{{ $route == 'dashboard' ? 'bg-gray-100' : 'bg-red-900' }} mb-3">
                         <a href="" class="rounded-l-2xl -ml-3 overflow-hidden 
                             {{ $route == 'dashboard' ? 'bg-gray-100' : 'bg-red-900' }} p-3 flex 
                             items-center hover:text-red-900">
                             <img src="{{asset('img/home.png')}}" style="width: 18px; 
                             filter : {{ $route == 'dashboard' ? 'invert(0)' : 'invert(1)' }}">
-                            <h1 class="ml-3 font-semibold {{ $route == 'dashboard' ? 'text-dark' : 'text-white' }}">Dashboard</h1>
+                            <h1 class="ml-3 text-sm font-bold {{ $route == 'dashboard' ? 'text-dark' : 'text-white' }}">
+                                Dashboard
+                            </h1>
                         </a>
-                        @if($route=='dashboard')
-                            <div class="bg-red-900 rounded-tr-full" style="height: 20px;"></div>
-                        @endif
                     </div>
                     <!-- book -->
-                    <div class="{{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }}">
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-br-full" style="height: 20px;"></div>
-                        @endif
+                    <div class="{{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }} mb-3">
                         <a href="" class="rounded-l-2xl -ml-3 overflow-hidden 
                             {{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }} p-3 flex 
                             items-center hover:text-red-900">
                             <img src="{{asset('img/home.png')}}" style="width: 18px; 
                             filter : {{ $route == 'book' ? 'invert(0)' : 'invert(1)' }}">
-                            <h1 class="ml-3 font-semibold {{ $route == 'book' ? 'text-dark' : 'text-white' }}">
+                            <h1 class="ml-3 text-sm font-bold {{ $route == 'book' ? 'text-dark' : 'text-white' }}">
                                 Book
                             </h1>
                         </a>
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-tr-full" style="height: 20px;"></div>
-                        @endif
                     </div>
-                <!-- journal -->
                     
-                    <div class="{{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }}">
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-br-full" style="height: 20px;"></div>
-                        @endif
-                        <a href="" class="rounded-l-2xl -ml-3 overflow-hidden 
-                            {{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }} p-3 flex 
-                            items-center hover:text-red-900">
-                            <img src="{{asset('img/home.png')}}" style="width: 18px; 
-                            filter : {{ $route == 'book' ? 'invert(0)' : 'invert(1)' }}">
-                            <h1 class="ml-3 font-semibold {{ $route == 'book' ? 'text-dark' : 'text-white' }}">
-                                Book
-                            </h1>
-                        </a>
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-tr-full" style="height: 20px;"></div>
-                        @endif
-                    </div>
-
-                    <!-- user -->
-                    <div class="{{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }}">
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-br-full" style="height: 20px;"></div>
-                        @endif
-                        <a href="" class="rounded-l-2xl -ml-3 overflow-hidden 
-                            {{ $route == 'book' ? 'bg-gray-100' : 'bg-red-900' }} p-3 flex 
-                            items-center hover:text-red-900">
-                            <img src="{{asset('img/home.png')}}" style="width: 18px; 
-                            filter : {{ $route == 'book' ? 'invert(0)' : 'invert(1)' }}">
-                            <h1 class="ml-3 font-semibold {{ $route == 'book' ? 'text-dark' : 'text-white' }}">
-                                Book
-                            </h1>
-                        </a>
-                        @if($route=='book')
-                            <div class="bg-red-900 rounded-tr-full" style="height: 20px;"></div>
-                        @endif
-                    </div>
-
-                    
-
-                    
-                    
-                    
+                  
                     
                 </div>
             </div>
