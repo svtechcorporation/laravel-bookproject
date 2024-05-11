@@ -14,7 +14,7 @@ class AdminController extends Controller
         ]);
     }
 
-
+    // books
     public function books(){
 
         return view('admin.bookpage', [
@@ -27,6 +27,38 @@ class AdminController extends Controller
         return view('admin.bookpage', [
             'route'=>'book',
             'operation'=>'add',
+        ]);
+    }
+    public function editbooks(){
+
+        return view('admin.bookpage', [
+            'route'=>'book',
+            'operation'=>'edit',
+        ]);
+    }
+
+    //  journals
+    public function journals(){
+
+        return view('admin.journalpage', [
+            'route'=>'journal',
+            'operation'=>'view',
+        ]);
+    }
+    public function addjournals(){
+
+        return view('admin.journalpage', [
+            'route'=>'journal',
+            'operation'=>'add',
+        ]);
+    }
+
+
+    public function editjournals(){
+
+        return view('admin.journalpage', [
+            'route'=>'journal',
+            'operation'=>'edit',
         ]);
     }
 }

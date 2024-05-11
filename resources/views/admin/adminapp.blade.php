@@ -49,7 +49,7 @@
                     
                     <!-- journal -->
                     <div class="{{ $route == 'journal' ? 'bg-white' : 'bg-red-900' }} mb-3">
-                        <a href="{{route('admin')}}" class="rounded-l-2xl -ml-3 overflow-hidden 
+                        <a href="{{route('admin.journals')}}" class="rounded-l-2xl -ml-3 overflow-hidden 
                             {{ $route == 'journal' ? 'bg-white' : 'bg-red-900' }} p-3 flex 
                             items-center hover:text-red-900">
                             <img src="{{asset('img/home.png')}}" style="width: 18px; 
@@ -95,6 +95,9 @@
                     <h1 class="text-sm text-gray-600 font-bold">
                         Home > 
                         <span class="capitalize">{{$route }}</span>
+                        @if($operation ?? '') 
+                        > <span class="capitalize">{{$operation }}</span>
+                        @endif
                     </h1>
                     <div class="flex items-center">
                         <form class="flex items-center bg-gray-300 rounded-full overflow-hidden">

@@ -25,5 +25,12 @@ Route::get('/register', [LoginController::class, 'register'])->name('register');
 
 
 Route::get('/admin', [AdminController::class, 'home'])->name('admin');
+
 Route::get('/admin/books', [AdminController::class, 'books'])->name('admin.books');
 Route::get('/admin/books/add', [AdminController::class, 'addbooks'])->name('admin.books.add');
+Route::get('/admin/books/edit', [AdminController::class, 'editbooks'])->name('admin.books.edit');
+
+
+Route::get('/admin/journals', [AdminController::class, 'journals'])->name('admin.journals');
+Route::get('/admin/journals/add', [AdminController::class, 'addjournals'])->name('admin.journals.add');
+Route::get('/admin/journals/edit', [AdminController::class, 'editjournals'])->name('admin.journals.edit');
