@@ -28,7 +28,9 @@ Route::get('/admin', [AdminController::class, 'home'])->name('admin');
 
 Route::get('/admin/books', [AdminController::class, 'books'])->name('admin.books');
 Route::get('/admin/books/add', [AdminController::class, 'addbooks'])->name('admin.books.add');
-Route::get('/admin/books/edit', [AdminController::class, 'editbooks'])->name('admin.books.edit');
+Route::post('/admin/books/add', [AdminController::class, 'storebooks'])->name('admin.books.add');
+Route::get('/admin/books/edit/{book}', [AdminController::class, 'editbooks'])->name('admin.books.edit');
+Route::post('/admin/books/edit/{book}', [AdminController::class, 'updatebooks'])->name('admin.books.edit');
 
 
 Route::get('/admin/journals', [AdminController::class, 'journals'])->name('admin.journals');
