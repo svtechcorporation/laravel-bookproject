@@ -25,7 +25,7 @@ class AdminController extends Controller
             'books'=>$books,
         ]);
     }
-    public function viewbooks(){
+    public function viewbooks(Book $book){
         $books = Book::get()->where('type','book');
 
         return view('admin.bookpage', [
@@ -33,6 +33,7 @@ class AdminController extends Controller
             'operation'=>'view',
             'isview'=>'true',
             'books'=>$books,
+            'book'=>$book,
         ]);
     }
 
