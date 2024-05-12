@@ -8,7 +8,7 @@
                 <img src="{{asset('covers/'.$book->cover)}}" style="width: 50px;"/>
                 <div class="mx-3">
                     <h1 class="text-sm font-semibold">{{$book->title}}</h1>
-                    <p class="text-xs text-gray-500">
+                    <p class="text-xs text-gray-500 max-h-8 overflow-hidden text-ellipsis">
                         {{$book->description}} 
                     </p>
                     <h1 class="text-sm text-red-500 font-bold">${{$book->price}}</h1>
