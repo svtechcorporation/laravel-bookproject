@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
     </head>
     <body>
-        <div class=" bg-red-900 w-full p-10 flex  min-h-screen">
+        <div class="bg-red-900 w-full p-10 flex  min-h-screen">
+            @include('admin.components.bookdetails')
             <div class="w-2/12">
                 <div class="flex items-center border-b-2 border-gray-500 mr-10 pb-3">
                     <img src="{{asset('img/logo.png')}}" style="width: 50px; filter:invert(0)">

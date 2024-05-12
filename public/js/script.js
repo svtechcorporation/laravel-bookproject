@@ -9,3 +9,17 @@ window.addEventListener("scroll", () =>{
         document.getElementById('navigation').classList.remove('sticky')
     }
 });
+
+
+document.getElementById('fileInput').addEventListener('change', function() {
+    var file = this.files[0];
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = event.target.result;
+            imagePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+});

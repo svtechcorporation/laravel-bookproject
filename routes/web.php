@@ -27,6 +27,7 @@ Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::get('/admin', [AdminController::class, 'home'])->name('admin');
 
 Route::get('/admin/books', [AdminController::class, 'books'])->name('admin.books');
+Route::get('/admin/books/view/{book}', [AdminController::class, 'viewbooks'])->name('admin.books.view');
 Route::get('/admin/books/add', [AdminController::class, 'addbooks'])->name('admin.books.add');
 Route::post('/admin/books/add', [AdminController::class, 'storebooks'])->name('admin.books.add');
 Route::get('/admin/books/edit/{book}', [AdminController::class, 'editbooks'])->name('admin.books.edit');
@@ -35,4 +36,6 @@ Route::post('/admin/books/edit/{book}', [AdminController::class, 'updatebooks'])
 
 Route::get('/admin/journals', [AdminController::class, 'journals'])->name('admin.journals');
 Route::get('/admin/journals/add', [AdminController::class, 'addjournals'])->name('admin.journals.add');
-Route::get('/admin/journals/edit', [AdminController::class, 'editjournals'])->name('admin.journals.edit');
+Route::post('/admin/journals/add', [AdminController::class, 'storejournals'])->name('admin.journals.add');
+Route::get('/admin/journals/edit/{book}', [AdminController::class, 'editjournals'])->name('admin.journals.edit');
+Route::post('/admin/journals/edit/{book}', [AdminController::class, 'updatejournals'])->name('admin.journals.edit');

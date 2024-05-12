@@ -2,7 +2,7 @@
 @extends('admin.adminapp')
 
 @section('content')
-    <div class="">
+    <div class="" style="position: relative;">
         <h1 class="mb-3 text-xl font-black">
             {{ $operation=='view'? 'List All Books': ($operation=='edit' ? 'Edit Book':'Add New Book')}}
         </h1>

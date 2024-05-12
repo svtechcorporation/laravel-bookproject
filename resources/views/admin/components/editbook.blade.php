@@ -1,6 +1,6 @@
 
 <div>
-    <form action="{{route('admin.books.edit', $book)}}" class="my-2" method="post" enctype="multipart/form-data">
+    <form action="{{$route=='book'?route('admin.books.edit', $book):route('admin.journals.edit', $book)}}" class="my-2" method="post" enctype="multipart/form-data">
         @csrf
         @if($errors->any())
             <h1 class="p-2 bg-red-500 text-white text-xs rounded">Please fill all out all fields</h1>
@@ -27,10 +27,10 @@
             class="w-full px-3 py-2 rounded border-1 shadow">{{$book->description}}</textarea>
         </div>
         <div class="my-4 flex items-center">
-            <img src="{{asset('covers/'.$book->cover)}}" style="width: 100px;"/>
+            <img src="{{asset('covers/'.$book->cover)}}" style="width: 100px;" id="imagePreview"/>
             <div class="flex flex-col ml-4">
                 <label class="text-xs text-gray-500">Select Book Cover</label>
-                <input name="cover" type="file" />
+                <input name="cover" type="file" id="fileInput" />
                 <label class="text-xs text-gray-500 mt-4">Select Book File</label>
                 <input name="file" type="file" />
             </div>
