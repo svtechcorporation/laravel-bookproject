@@ -10,7 +10,7 @@
         <div class="flex items-start mt-3">
             <div class="w-9/12 mr-10">
                 @for($i=0;$i < 10; $i++)
-                    <x-bookrow/>
+                    <x-bookrow />
                 @endfor
             </div>
             @include('layouts.sidebar')

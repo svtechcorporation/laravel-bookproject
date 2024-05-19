@@ -1,8 +1,9 @@
 
+@props(['journal' => $journal])
 
 <div class="bg-white mr-4 p-3 rounded shadow singlebook">
     <div>
-        <img src="{{asset('img/bg1.jpg')}}" style="width: 350px;"/>
+        <img src="{{asset('covers/'.$journal->cover)}}" style="width: 350px; height:200px;object-fit:cover;"/>
     </div>
     <div class="items-center w-full">
         <p class="text-xs text-gray-700">Author of Journal</p>
