@@ -16,6 +16,29 @@ class AdminController extends Controller
         ]);
     }
 
+    public function deleteBook(Book $book){
+        $book->delete();
+
+        if($book->type == 'book'){
+            $books = Book::get()->where('type','book');
+            return view('admin.bookpage', [
+                'route'=>'book',
+                'operation'=>'view',
+                'books'=>$books,
+            ]);
+        } else {
+            $books = Book::get()->where('type','journal');
+            return view('admin.journalpage', [
+                'route'=>'journal',
+                'operation'=>'view',
+                'books'=>$books,
+            ]);
+        }
+
+        dd('delete ', $book->type);
+    }
+
+
     // books
     public function books(){
         $books = Book::get()->where('type','book');
@@ -160,6 +183,7 @@ class AdminController extends Controller
         ]);
     }
 
+   
     public function updatejournals(Request $request, Book $book){
         $this->validate($request, [
             'title'=>'required',

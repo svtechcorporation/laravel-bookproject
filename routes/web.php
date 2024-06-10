@@ -41,3 +41,6 @@ Route::get('/admin/journals/add', [AdminController::class, 'addjournals'])->name
 Route::post('/admin/journals/add', [AdminController::class, 'storejournals'])->name('admin.journals.add');
 Route::get('/admin/journals/edit/{book}', [AdminController::class, 'editjournals'])->name('admin.journals.edit');
 Route::post('/admin/journals/edit/{book}', [AdminController::class, 'updatejournals'])->name('admin.journals.edit');
+
+
+Route::get('/admin/delete/{book}', [AdminController::class, 'deleteBook'])->name('admin.delete');
