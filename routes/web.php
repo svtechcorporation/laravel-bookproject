@@ -21,6 +21,8 @@ Route::get('/search', [RouteController::class, 'search'])->name('search');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 
+
+
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 
 

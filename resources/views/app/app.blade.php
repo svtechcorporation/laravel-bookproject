@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{ asset('tailwindcss/style.css')}}">
         <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/animation.css')}}">
     </head>
     <body>
         <div class="w-full">

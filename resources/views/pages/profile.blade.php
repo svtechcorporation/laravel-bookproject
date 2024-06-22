@@ -6,6 +6,7 @@
         <div class="flex flex-col w-full">
             User Page
         </div>
+        
         <div class="flex flex-col items-start py-4 mt-5">
             <h1 class="text-2xl font-bold">SIMILAR ITEMS</h1>
             <h1 class="text-gray-500 mb-5">Books you may like</h1>
