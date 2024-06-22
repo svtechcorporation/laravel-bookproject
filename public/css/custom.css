@@ -161,6 +161,12 @@ a {
     width: 90%;
     z-index: 20;
 }
+.bookpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
   
 
 @media screen and (max-width: 550px ) {
@@ -180,6 +186,80 @@ a {
     .toggle-menu {
         display: flex;
         align-items: center;
+    }
+    .landing-page {
+        height: 60vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing-page-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .landing-page-img {
+        display: none;
+    }
+    
+    .singlebook img {
+        width: 10px;
+    }
+    .footer {
+        padding: 3px;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links {
+        margin: 0px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .footer-about {
+        width: 100%;
+    }
+    .section-big {
+        padding: 10px;
+    }
+    .singlebigbook {
+        width: 100px;
+    }
+    .booklist-page {
+        padding: 5px 10px;
+    }
+    .booklist-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .booklist-content div {
+        width: 100%;
+    }
+    .bookrow {
+        display: flex;
+        flex-direction: column;
+    }
+    .bookrow div {
+        width: 100%;
+        margin: 0;
+    }
+    .small-screen {
+        display: flex;
+        flex-direction: column;
+    }
+    .small-screen div {
+        width: 100%;
+    }
+    .small-screen-padding {
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+    }
+    .small-screen-hide {
+        display: none;
     }
 }
 
@@ -203,22 +283,10 @@ a {
         display: flex;
         align-items: center;
     }
-    .landing-page {
-        height: 50vh;
+    .booklist-page {
         padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-    .landing-page-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .landing-page-img {
-        display: none;
-    }
+    
 }
 
 

@@ -117,6 +117,9 @@
                 <li class="@if($title==='Contact Us') nav-active @endif p-3">
                     <a href="{{route('contactus')}}">Contact Us</a>
                 </li>
+                <li class="@if($title==='Cart') nav-active @endif p-3">
+                    <a href="{{route('cart')}}">Cart</a>
+                </li>
             </ul>
         </div>
     </div>

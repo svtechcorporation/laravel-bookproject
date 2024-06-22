@@ -1,6 +1,6 @@
 
 
-<div class="border-b-2 border-gray-100 mb-5 p-3 flex items-center">
+<div class="border-b-2 border-gray-100 mb-5 p-3 flex items-center bookrow">
     <div class="flex justify-center items-center py-5 w-4/12 bg-gray-200 rounded-lg shadow-md mr-5">
         <img src="{{asset('img/basicprogram.jpg')}}" style="height: 180px; width:150px;object-fit:contain;"/>
     </div>

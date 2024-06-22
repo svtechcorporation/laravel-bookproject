@@ -1,18 +1,18 @@
 @extends('app.app')
 
 @section('content')
-    <div class="px-20 py-10">
+    <div class="px-20 py-10 small-screen-padding">
         <!-- title section -->
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-4xl font-bold">About Us</h1>
             <p class="text-sm text-gray-700">Know more of what we offer</p>
         </div>
         <!-- guarantee section -->
-        <div class="flex py-10 items-center justify-between">
+        <div class="flex py-10 items-center justify-between small-screen">
             <div class="w-5/12" style="position: relative;">
                 <img src="{{asset('img/library.jpg')}}" />
-                <div class="bg-red-600 p-3 shadow flex items-center justify-center flex-col text-white"
-                    style="position: absolute; right:-40px; bottom:-40px; border-radius:50%; width: 200px;height:200px;">
+                <div class="bg-red-600 p-2 shadow flex items-center justify-center flex-col text-white"
+                    style="position: absolute; right:-20px; bottom:-40px; border-radius:50%; width: 180px;height:180px;">
                     <p class="text-5xl font-bold">100%</p>
                     <p class="text-center text-gray-200">Guarantee on all our books</p>
                 </div>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <!-- founders section -->
-        <div class="flex mt-10 items-center justify-between">
+        <div class="flex mt-10 items-center justify-between small-screen-padding small-screen">
             <div class="w-6/12">
                 <h1 class="text-3xl font-semibold mb-3 text-right">
                     "Essence Are Such Joy To Be Cherished Handled With Pleasure"
@@ -53,8 +53,8 @@
             </div>
         </div>
         <!-- join community section -->
-        <div class="flex items-center justify-between bg-gray-900 mt-20 px-10 py-13w-full">
-            <div class="text-white w-6/12">
+        <div class="flex items-center justify-between bg-gray-900 mt-20 px-10 py-13 w-full small-screen-padding">
+            <div class="text-white w-6/12 small-screen-padding">
                 <h1 class="text-4xl font-bold">Join our Community</h1>
                 <h1 class="my-3 text-sm text-gray-200">
                     Enter your email address to receive regular updates, as well as news on
@@ -64,12 +64,12 @@
                     <button type="submit" class="px-4 py-2">Subscribe</button>
                 </form>
             </div>
-            <div>
+            <div class="small-screen-hide">
                 <img src="{{asset('img/bookfront.png')}}" style="width: 400px;"/>
             </div>
         </div>
         <!-- customer testimony section -->
-        <div class="flex flex-col items-center mt-20 mb-10 px-10">
+        <div class="flex flex-col items-center mt-20 mb-10 px-10 small-screen-padding">
             <h1 class="text-4xl font-bold">What our clients say</h1>
             <p class="text-sm text-gray-600">Testimonies</p>
             @php
@@ -77,9 +77,9 @@
 
             @endphp
 
-            <div class="flex mt-10">
+            <div class="flex mt-10 small-screen">
                 @foreach($customers as $customer)
-                    <div class="flex flex-col items-center mx-10">
+                    <div class="flex flex-col items-center mx-10 small-screen-padding">
                         <div class="rounded-full overflow-hidden">
                             <img src="{{asset($customer)}}" />
                         </div>

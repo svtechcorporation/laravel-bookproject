@@ -2,7 +2,8 @@
 
 @props(['book' => $book])
 
-<div class="bg-white mx-3 p-3 flex flex-col items-center justify-center rounded shadow singlebook" style="width:180px;">
+<div class="bg-white mx-2 mb-5 p-3 flex flex-col items-center justify-center rounded shadow singlebook" 
+    style="width:150px;height:270px">
     <div>
         <img src="{{asset('covers/'.$book->cover)}}" style="height: 150px;width:120px;"/>
     </div>
