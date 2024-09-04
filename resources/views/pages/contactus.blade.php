@@ -1,15 +1,15 @@
 @extends('app.app')
 
 @section('content')
-    <div class="px-20 py-10">
+    <div class="px-20 py-10 small-screen-padding">
         <!-- title section -->
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-4xl font-bold">Contact Us</h1>
             <p class="text-sm text-gray-700">Know us more</p>
         </div>
         <!--  section -->
-        <div class="flex py-10 items-start justify-between">
-            <div class="w-6/12">
+        <div class="flex py-10 items-start justify-between small-screen">
+            <div class="w-6/12 small-screen-padding">
                 <div class="bg-gray-200 p-4 rounded-lg">
                     <h1 class="font-bold mb-2">Address</h1>
                     <div class="flex items-center">

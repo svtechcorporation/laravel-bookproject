@@ -1,7 +1,7 @@
 
 @props(['journal' => $journal])
 
-<div class="bg-white mr-4 p-3 rounded shadow singlebook">
+<div class="bg-white mr-4 p-3 rounded shadow mb-5" style="width: 280px; ">
     <div>
         <img src="{{asset('covers/'.$journal->cover)}}" style="width: 350px; height:200px;object-fit:cover;"/>
     </div>

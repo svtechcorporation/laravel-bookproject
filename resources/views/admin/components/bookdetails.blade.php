@@ -35,7 +35,7 @@
                                 class="shadow-md px-4 py-2 text-sm text-white bg-green-500 button-hover rounded mr-5">
                                 Edit {{$book->type}}
                             </a>
-                            <a href=""
+                            <a href="{{ route('admin.delete', $book)}}"
                                 class="shadow-md px-4 py-2 text-sm text-white bg-red-500 button-hover rounded">
                                 Delete {{$book->type}}
                             </a>

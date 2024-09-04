@@ -1,9 +1,10 @@
 <div class="flex shadow w-3/12 p-3">
     <form class="w-full">
+        <h1 class="bg-dark rounded text-white text-center px-3 py-2 mb-3 font-bold">Sort By:</h1>
         <div>
             <h1 class="font-bold border-b-2 border-gray-100 pb-3 mb-3">Price</h1>
             <div class="flex items-center text-sm font-semibold">
-                From:<span class="text-red-500 font-bold text-xl ml-1">$</span>
+                <span class="text-red-500 font-bold text-xl ml-1">$</span>
                 <input placeholder="0" type="number" class="p-1 mx-1 shadow-md rounded border-1" 
                 style="width:50px"/> 
                 To <span class="text-red-500 font-bold text-xl ml-1">$</span>
