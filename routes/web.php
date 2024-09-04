@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\Route\AdminController;
+use App\Http\Controllers\Route\AdminsController;
 use App\Http\Controllers\Route\RouteController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,3 +42,19 @@ Route::get('/admin/journals/add', [AdminController::class, 'addjournals'])->name
 Route::post('/admin/journals/add', [AdminController::class, 'storejournals'])->name('admin.journals.add');
 Route::get('/admin/journals/edit/{book}', [AdminController::class, 'editjournals'])->name('admin.journals.edit');
 Route::post('/admin/journals/edit/{book}', [AdminController::class, 'updatejournals'])->name('admin.journals.edit');
+
+
+
+
+Route::get('/admins', [AdminsController::class, 'home'])->name('admins');
+Route::get('/admins/books', [AdminsController::class, 'books'])->name('admins.books');
+Route::get('/admins/books/add', [AdminsController::class, 'addbooks'])->name('admins.books.add');
+Route::post('/admins/books/add', [AdminsController::class, 'storebooks'])->name('admins.books.add');
+
+Route::get('/admins/books/edit/{book}', [AdminsController::class, 'editbooks'])->name('admins.books.edit');
+
+
+
+
+Route::get('/admins/journals/edit/{book}', [AdminsController::class, 'editbooks'])->name('admins.journals.edit');
+Route::post('/admins/journals/add', [AdminsController::class, 'storebooks'])->name('admins.journals.add');

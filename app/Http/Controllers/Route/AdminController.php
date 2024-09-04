@@ -43,6 +43,7 @@ class AdminController extends Controller
             'operation'=>'add',
         ]);
     }
+    
     public function editbooks(Book $book){
         return view('admin.bookpage', [
             'route'=>'book',
