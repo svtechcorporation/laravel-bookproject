@@ -27,6 +27,9 @@ Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 
 
 
+
+
+
 Route::get('/admin', [AdminController::class, 'home'])->name('admin');
 
 Route::get('/admin/books', [AdminController::class, 'books'])->name('admin.books');
@@ -50,11 +53,10 @@ Route::get('/admins', [AdminsController::class, 'home'])->name('admins');
 Route::get('/admins/books', [AdminsController::class, 'books'])->name('admins.books');
 Route::get('/admins/books/add', [AdminsController::class, 'addbooks'])->name('admins.books.add');
 Route::post('/admins/books/add', [AdminsController::class, 'storebooks'])->name('admins.books.add');
-
 Route::get('/admins/books/edit/{book}', [AdminsController::class, 'editbooks'])->name('admins.books.edit');
 
+Route::get('/admins/journals', [AdminsController::class, 'journals'])->name('admins.journals');
+Route::get('/admins/journals/add', [AdminsController::class, 'addjournals'])->name('admins.journals.add');
 
-
-
-Route::get('/admins/journals/edit/{book}', [AdminsController::class, 'editbooks'])->name('admins.journals.edit');
+Route::get('/admins/journals/edit/{book}', [AdminsController::class, 'editjournals'])->name('admins.journals.edit');
 Route::post('/admins/journals/add', [AdminsController::class, 'storebooks'])->name('admins.journals.add');

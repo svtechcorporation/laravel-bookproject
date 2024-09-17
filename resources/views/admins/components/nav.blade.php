@@ -9,15 +9,46 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center">
-            <h1 class="text-lg font-bold uppercase mr-4">{{$operation}}</h1>
+        <div class="flex items-center small-nav-menu">
+            <h1 class="text-lg font-bold uppercase mr-4">{{$operation!='dashboard' ? $operation : ''}} {{$route}}</h1>
             <div>
                 <img src="{{asset('img/openmenu.png')}}" class="cursor-pointer" style="width: 40px; height:40px" id="close_menu" />
                 <img src="{{asset('img/closemenu.png')}}" class="cursor-pointer" style="width: 40px; height:40px; display:none" id="open_menu" />
             </div>
         </div>
+        <div class="nav-links">
+            <a href="{{route('admins')}}" 
+            class="flex items-center justify-between font-semibold py-1 mr-2 rounded-lg px-3 {{ $operation == 'dashboard' ? 'nav_active' : '' }}">
+                Dashboard
+                <img src="{{asset('img/home.png')}}" 
+                class="ml-2 {{ $operation == 'dashboard' ? 'change_image' : ''}}" 
+                style="width: 20px; "/>
+            </a>
+            <a href="{{route('admins.books')}}" 
+            class="flex items-center justify-between font-semibold py-1 mr-2 rounded-lg px-3 {{ $route == 'book' ? 'nav_active' : '' }}">
+                Book
+                <img src="{{asset('img/book.png')}}" 
+                class="ml-2 {{ $operation == 'view' ? 'change_image' : ''}}" 
+                style="width: 20px; "/>
+            </a>
+            <a href="{{route('admins.journals')}}" 
+            class="flex items-center justify-between font-semibold py-1 mr-2 rounded-lg px-3 {{ $route == 'journal' ? 'nav_active' : '' }}">
+                Journal
+                <img src="{{asset('img/journal.png')}}" 
+                class="ml-2 {{ $operation == 'journal' ? 'change_image' : ''}}" 
+                style="width: 20px; "/>
+            </a>
+            <a href="" 
+            class="flex items-center justify-between font-semibold py-1 mr-2 rounded-lg px-3 {{ $operation == 'view_website' ? 'nav_active' : '' }}">
+                Notification
+                <img src="{{asset('img/notification.png')}}" 
+                class="ml-2 {{ $operation == 'view_website' ? 'change_image' : ''}}" 
+                style="width: 20px; "/>
+            </a>
+        </div>
     </div>
-    <div class="bg-white rounded-lg overflow-hidden shadow align-right flex mr-2 w-6/12 flex-col position-absolute top-20" 
+    <div class="bg-white rounded-lg overflow-hidden shadow align-right 
+            flex mr-2 w-6/12 flex-col position-absolute top-20" 
         id="nav_draw" style="display: none;">
         <a href="{{route('admins')}}" 
         class="flex items-center justify-between font-semibold p-2 py-3 {{ $operation == 'dashboard' ? 'nav_active' : '' }}">
@@ -27,14 +58,14 @@
             style="width: 20px; "/>
         </a>
         <a href="{{route('admins.books')}}" 
-        class="flex items-center justify-between font-semibold p-2 py-3 {{ $operation == 'view' ? 'nav_active' : '' }}">
+        class="flex items-center justify-between font-semibold p-2 py-3 {{ $route == 'book' ? 'nav_active' : '' }}">
             Book
             <img src="{{asset('img/book.png')}}" 
             class="ml-2 {{ $operation == 'view' ? 'change_image' : ''}}" 
             style="width: 20px; "/>
         </a>
-        <a href="" 
-        class="flex items-center justify-between font-semibold p-2 py-3 {{ $operation == 'journal' ? 'nav_active' : '' }}">
+        <a href="{{route('admins.journals')}}" 
+        class="flex items-center justify-between font-semibold p-2 py-3 {{ $route == 'journal' ? 'nav_active' : '' }}">
             Journal
             <img src="{{asset('img/journal.png')}}" 
             class="ml-2 {{ $operation == 'journal' ? 'change_image' : ''}}" 

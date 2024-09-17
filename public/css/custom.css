@@ -167,7 +167,15 @@ a {
     align-items: center;
     flex-wrap: wrap;
 }
-  
+.custom-line-clamp {
+    max-lines: 2;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+a:hover {
+    color: inherit;
+}
 
 @media screen and (max-width: 550px ) {
     #navigation {

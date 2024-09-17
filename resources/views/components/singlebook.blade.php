@@ -2,25 +2,29 @@
 
 @props(['book' => $book])
 
-<div class="bg-white mx-2 mb-5 p-3 flex flex-col items-center justify-center rounded shadow singlebook" 
-    style="width:150px;height:270px">
-    <div>
-        <img src="{{asset('covers/'.$book->cover)}}" style="height: 150px;width:120px;"/>
+<div class="bg-white mx-2 mb-5 flex flex-col items-center justify-between rounded-lg 
+    overflow-hidden shadow-lg singlebook" 
+    style="width:200px;height:300px">
+    <div >
+        <img src="{{asset('covers/'.$book->cover)}}" 
+            class="overflow-hidden"
+            style="width:200px; height: 210px; object-fit:cover"/>
     </div>
-    <div class="items-center w-full">
+    <div class="items-center w-full flex flex-col items-center justify-center h-full px-2">
+        <p class="font-semibold text-sm text-center custom-line-clamp">{{$book->title}}</p>
         <p class="text-xs text-gray-700 text-center">{{$book->author}}</p>
-        <p class="font-bold text-center">{{$book->title}}</p>
         <p class="text-center text-red-500 font-bold">${{$book->price}}</p>
     </div>
     <div class="hidden-btn flex items-center justify-center">
-        <div class="bg-white p-2 rounded m-2">
-            <a href="">
-                <img src="{{asset('img/carticon.png')}}" style="width: 30px;"/>
+        <div class="rounded m-2 bg-green-700 shadow text-white" >
+            <a href="" class="flex text-sm items-center px-3 py-1">
+                <span class="text-xl font-black">+</span>
+                 Cart
             </a>
         </div>
-        <div class="bg-white p-2 rounded m-2">
-            <a href="">
-                <img src="{{asset('img/price2.png')}}" style="width: 30px;"/>
+        <div class="rounded m-2 bg-blue-700 shadow text-white">
+            <a href="" class="flex text-sm items-center py-2 px-3">
+                View
             </a>
         </div>
     </div>

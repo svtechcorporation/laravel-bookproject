@@ -9,8 +9,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-
-    
     public function profile(){
         $data = Book::get();
         $books = $data->where('type','book');
@@ -22,4 +20,7 @@ class UserController extends Controller
             'similarbooks'=>$similarbooks,
         ]);
     }
+
+
+
 }

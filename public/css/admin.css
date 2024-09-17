@@ -1,0 +1,53 @@
+
+* {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: none;
+}
+
+
+@media screen and (min-width:800px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .small-nav-menu {
+        display: none;
+    }
+    .book-page-section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .page-details-section {
+        width: 30%;
+    }
+    .page-detail-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .page-detail-list div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .page-operation-section {
+        width: 70%;
+    }
+    .dashboard {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .dashboard-details {
+        width: 28%;
+    }
+    .dashboard-content {
+        width: 70%;
+    }
+}

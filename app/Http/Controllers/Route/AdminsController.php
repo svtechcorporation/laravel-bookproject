@@ -15,9 +15,11 @@ class AdminsController extends Controller
 
     public function home(){
         return view('admins.home', [
-            "operation"=> "dashboard"
+            "operation"=> "dashboard",
+            'route'=>'dashboard',
         ]);
     }
+
     public function books(){
         $books = Book::get()->where('type','book');
 
@@ -28,9 +30,27 @@ class AdminsController extends Controller
         ]);
     }
 
+    public function journals(){
+        $books = Book::get()->where('type','journal');
+
+        return view('admins.pages.books', [
+            'route'=>'journal',
+            'operation'=>'view',
+            'books'=>$books,
+        ]);
+    }
+
+
     public function addbooks(){
         return view('admins.pages.books', [
             'route'=>'book',
+            'operation'=>'add',
+        ]);
+    }
+
+    public function addjournals(){
+        return view('admins.pages.books', [
+            'route'=>'journal',
             'operation'=>'add',
         ]);
     }
@@ -39,6 +59,13 @@ class AdminsController extends Controller
     public function editbooks(Book $book){
         return view('admins.pages.books', [
             'route'=>'book',
+            'operation'=>'edit',
+            'book'=>$book,
+        ]);
+    }
+    public function editjournals(Book $book){
+        return view('admins.pages.books', [
+            'route'=>'journal',
             'operation'=>'edit',
             'book'=>$book,
         ]);
@@ -120,7 +147,7 @@ class AdminsController extends Controller
             'description'=>$request->description,
             'cover'=>$reCover,
             'file'=>$reFilename,
-            'type'=>'book',
+            'type'=>$request->type,
         ]);
         
         return redirect()->back()->with('status','Successfully Saved');

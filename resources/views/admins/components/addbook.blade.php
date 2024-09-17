@@ -1,6 +1,6 @@
 
 <div>
-    <form action="{{ $route=='book'?route('admins.books.add'):route('admins.journals.add')}}" class="my-2" method="post" enctype="multipart/form-data" >
+    <form action="{{ route('admins.books.add')}}" class="my-2" method="post" enctype="multipart/form-data" >
         @csrf
         @if($errors->any())
             <h1 class="p-2 bg-red-500 text-white text-xs rounded">Please fill all out all fields</h1>
@@ -21,6 +21,10 @@
                 class="px-3 py-2 mr-4 rounded border-1 text-dark shadow-md w-4/12"/>
             <input name="quantity" type="number" placeholder="Quantity" value="{{old('quantity')}}"
                 class="px-3 py-2 rounded border-1 text-dark shadow-md w-4/12"/>
+        </div>
+        <div class="flex my-3" style="display: none;">
+            <input name="type" type="text" value="{{$route=='book'?'book':'journal'}}"
+                class="px-3 py-2 rounded border-1 text-dark shadow-md w-full"/>
         </div>
         <div>
             <textarea rows="5" placeholder="{{$route=='book'?'Book':'Journal'}} Description" name="description" 
