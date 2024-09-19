@@ -73,7 +73,7 @@ class RouteController extends Controller
         $similarbooks = $books->random(5)->shuffle();
 
         return view('pages.cart', [
-            'title'=>'Home',
+            'title'=>'Cart',
             'header'=>'Cart Item',
             'similarbooks'=>$similarbooks,
         ]);
@@ -82,7 +82,7 @@ class RouteController extends Controller
     public function search(){
 
         return view('pages.search', [
-            'title'=>'Home',
+            'title'=>'Search',
             'header'=>'Search',
         ]);
 

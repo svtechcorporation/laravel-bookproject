@@ -11,18 +11,19 @@ a {
 }
 /* navigation */
 .nav-link-right a img {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 }
 
 .nav-link-right div {
-    margin: 0 10px;
-    padding: 5px;
+    margin: 0 3px;
+    padding: 3px 10px;
 }
 
 .nav-link-right div:hover {
     background: var(--primaryColor);
     color: white;
+    border-radius: 10px;
 }
 
 .nav-link-right div:hover div {
@@ -39,8 +40,8 @@ a {
 }
 
 .nav-link-center li {
-    margin: 0px 10px;
-    padding: 10px;
+    margin: 0px 8px;
+    padding: 3px 8px;
     color: var(--dark);
     font-weight: bold;
 }
@@ -157,8 +158,8 @@ a {
     display: none;
     position: absolute;
     right: 10px;
-    top: 100px;
-    width: 90%;
+    top: 60px;
+    width: 60%;
     z-index: 20;
 }
 .bookpage {

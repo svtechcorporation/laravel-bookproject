@@ -10,7 +10,7 @@ class LoginController extends Controller
     public function login(){
         
         return view('pages.login', [
-            'title'=>'Home',
+            'title'=>'Login',
             'header'=>'Login',
         ]);
     }
@@ -19,7 +19,7 @@ class LoginController extends Controller
     public function register(){
         
         return view('pages.register', [
-            'title'=>'Home',
+            'title'=>'Register',
             'header'=>'Register',
         ]);
     }
