@@ -14,17 +14,16 @@
         <div class="px-10 w-6/12 flex justify-between ml-5 footer-links">
             <div class="flex flex-col">
                 <h1>Info</h1>
-                <a href="">Contact Us</a>
-                <a href="">About Us</a>
-                <a href="">Terms and Conditions</a>
-                <a href="">Best Sellers</a>
+                <a href="{{route('contactus')}}">Contact Us</a>
+                <a href="{{route('aboutus')}}">About Us</a>
+                <a href="{{route('aboutus')}}">Terms and Conditions</a>
+                <a href="{{route('books')}}">Best Sellers</a>
             </div>
             <div class="flex flex-col">
                 <h1>Quick Links</h1>
-                <a href="">My Account</a>
-                <a href="">Shopping Cart</a>
-                <a href="">Wishlist</a>
-                <a href="">Help</a>
+                <a href="{{route('profile')}}">My Account</a>
+                <a href="{{route('cart')}}">Shopping Cart</a>
+                <a href="{{route('aboutus')}}">Help</a>
             </div>
             <div class="flex flex-col">
                 <h1>Follow us</h1>

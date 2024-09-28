@@ -1,4 +1,4 @@
-@extends('admins.components.app')
+@extends('admin.components.app')
 
 @section('content')
 <div class="p-3 book-page-section">
@@ -21,8 +21,8 @@
     </div>
     <div class="p-3 page-operation-section" style="position: relative;">
         <a href="{{$route =='book' ? 
-                    $operation=='view' ? route('admins.books.add'):route('admins.books') : (
-                    $operation=='view' ? route('admins.journals.add'):route('admins.journals') )
+                    $operation=='view' ? route('admin.books.add'):route('admin.books') : (
+                    $operation=='view' ? route('admin.journals.add'):route('admin.journals') )
                 }}" 
             class="{{$operation=='view'?'bg-green-500':'bg-blue-500'}} 
             px-3 py-2 rounded text-white text-sm button-hover shadow capitalize">
@@ -34,11 +34,11 @@
         <div class="flex items-start mt-2">
             <div class="w-full">
                 @if($operation == 'view')
-                    @include('admins.components.viewbook')
+                    @include('admin.components.viewbook')
                 @elseif($operation=='add')
-                    @include('admins.components.addbook')
+                    @include('admin.components.addbook')
                 @elseif($operation=='edit')
-                    @include('admins.components.editbook')
+                    @include('admin.components.editbook')
                 @endif
             </div>
 

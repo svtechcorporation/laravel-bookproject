@@ -38,7 +38,7 @@
         <div>
             <button class="px-4 rounded py-2 text-sm text-white bg-green-600 button-hover
                 mr-5 shadow-md">Update</button>
-            <a href="{{$route=='book'?route('admins.books'):route('admins.journals')}}" class="px-4 rounded py-2 text-sm text-white bg-red-600 button-hover
+            <a href="{{$route=='book'?route('admin.books'):route('admin.journals')}}" class="px-4 rounded py-2 text-sm text-white bg-red-600 button-hover
                 shadow-md">Cancel</a>
         </div>
     </form>

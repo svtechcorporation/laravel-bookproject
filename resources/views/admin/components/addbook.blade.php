@@ -1,6 +1,6 @@
 
 <div>
-    <form action="{{ route('admins.books.add')}}" class="my-2" method="post" enctype="multipart/form-data" >
+    <form action="{{ route('admin.books.add')}}" class="my-2" method="post" enctype="multipart/form-data" >
         @csrf
         @if($errors->any())
             <h1 class="p-2 bg-red-500 text-white text-xs rounded">Please fill all out all fields</h1>
@@ -34,15 +34,15 @@
             <img src="{{asset('img/blankbook.png')}}" style="width: 120px;" id="imagePreview"/>
             <div class="flex flex-col ml-3">
                 <label class="text-xs text-gray-500">Select {{$route=='book'?'book':'journal'}} Cover</label>
-                <input name="cover" type="file" value="{{old('cover')}}" id="fileInput"/>
+                <input accept="image/*" name="cover" type="file" value="{{old('cover')}}" id="fileInput"/>
                 <label class="text-xs text-gray-500 mt-4">Select {{ $route=='book'?'book':'journal'}} File</label>
-                <input name="file" type="file" value="{{old('file')}}" />
+                <input accept=".pdf, .doc, .docx, .xlsx" name="file" type="file" value="{{old('file')}}" />
             </div>
         </div>
         <div>
             <button type="submit" class="px-4 rounded py-2 text-sm text-white bg-green-600 button-hover
                 mr-5 shadow-md">Save {{ $route=='book'?'Book':'Journal'}}</button>
-            <a href="{{route('admins.books')}}" class="px-4 rounded py-2 text-sm text-white bg-red-600 button-hover
+            <a href="{{route('admin.books')}}" class="px-4 rounded py-2 text-sm text-white bg-red-600 button-hover
                 shadow-md">Cancel</a>
         </div>
     </form>

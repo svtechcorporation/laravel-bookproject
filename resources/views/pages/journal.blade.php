@@ -8,9 +8,12 @@
         <p class="text-xs text-gray-700">See more of what we know</p>
         <div class="flex mt-3 items-start booklist-content">
             <div class="w-9/12 mr-10">
-                @for($i=0;$i < 10; $i++)
-                    <x-bookrow/>
-                @endfor
+                @foreach($books as $book)
+                    <x-bookrow  :book="$book"/>
+                @endforeach
+                <div>
+                    {{$books->links()}}
+                </div>
             </div>
             @include('layouts.sidebar')
         </div>

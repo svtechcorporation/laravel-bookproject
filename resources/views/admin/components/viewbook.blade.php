@@ -15,9 +15,9 @@
                 </div>
             </div>
             <div class="flex">
-                <a href="{{route('admin.books.view', $book)}}" class="text-white text-xs font-semibold bg-blue-500 
+                <a href="" class="text-white text-xs font-semibold bg-blue-500 
                 rounded mx-1 shadow px-2 py-1 button-hover">View</a>
-                <a href="{{ $route=='book'? route('admins.books.edit', $book):route('admins.journals.edit', $book)}}" 
+                <a href="{{ $route=='book'? route('admin.books.edit', $book):route('admin.journals.edit', $book)}}" 
                 class="text-white text-xs font-semibold bg-green-500 
                 rounded mx-1 shadow px-2 py-1 button-hover">Edit</a>
             </div>

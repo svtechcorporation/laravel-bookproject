@@ -1,14 +1,20 @@
 * {
     --primaryColor: rgb(212, 54, 54);
     --dark: rgb(27, 27, 27);
-    transition: all .5s;
+    transition: all .2s;
 }
 body {
-    transition: all 2s;
+    transition: all .2s;
 }
 a {
     text-decoration: none;
 }
+a:hover {
+    text-decoration: none;
+    color:inherit;
+}
+
+
 /* navigation */
 .nav-link-right a img {
     height: 20px;
@@ -98,7 +104,7 @@ a {
 /* landing page */
 
 .landing-page {
-    background: linear-gradient(rgba(255, 255, 255, 0.850), rgba(224, 224, 224, 0.850)),
+    background: linear-gradient(rgba(19, 0, 0, 0.65), rgba(20, 2, 37, 0.65)),
     url('../img/bg4.jpg');
 }
 
@@ -159,7 +165,7 @@ a {
     position: absolute;
     right: 10px;
     top: 60px;
-    width: 60%;
+    width: 80%;
     z-index: 20;
 }
 .bookpage {
@@ -169,7 +175,7 @@ a {
     flex-wrap: wrap;
 }
 .custom-line-clamp {
-    max-lines: 2;
+    max-lines: 1;
     max-height: 40px;
     overflow: hidden;
 }
